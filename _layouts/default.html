@@ -1,10 +1,45 @@
 <!doctype html>
-<html>
+<html lang="zh-cn">
 	<head>
 		<meta  http-equiv="content-type" content="text/html; charset=utf-8" >
+    <!-- 通知 IE 采用其所支持的最新的模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8" >
 		<title>{{ page.title }}</title>
+		<link rel="stylesheet" type="text/css" href="../_public/css/bootstrap.min.css">
 	</head>
 	<body>
-		{{ content }}
+    <header class="navbar" role="banner">
+      <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">范子冬的个人网站</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">编程</a></li>
+              <li><a href="#">读书</a></li>
+              <li><a href="#">关于我</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+		  {{ content }}
+    </div>
+
+    <script type="text/javascript" src="../_public/js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="../_public/js/bootstrap.min.js"></script>
 	</body>
 </html>
