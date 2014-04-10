@@ -1,16 +1,22 @@
 ---
 layout: default
-title: 我的Blog
+title: 范子冬的个人网站
 ---
 
-<h2>{{ page.title }}</h2>
+{% for post in site.posts %}
+<article class="posts">
+  <h2>
+    <a title="{{ post.title }}" href="{{ post.url }}">{{ post.title }}</a>
+  </h2>
+  <div class="postmetadata clearfix">
+    <span class="tag">编程</span>
+    •
+    <span class="date">{{ post.date | date_to_string }}</span>
+  </div>
+  <div class="content">
+    {{ post.excerpt }}
+  </div>
+  <div class="clearfix"></div>
+</article>
+{% endfor %}
 
-<p>最新文章</p>
-
-<ul>
-
-	{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-
-</ul>
